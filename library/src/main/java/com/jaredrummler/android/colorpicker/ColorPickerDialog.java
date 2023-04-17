@@ -16,6 +16,9 @@
 
 package com.jaredrummler.android.colorpicker;
 
+import java.util.Arrays;
+import java.util.Locale;
+
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -41,7 +44,6 @@ import android.widget.FrameLayout;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.SeekBar;
 import android.widget.TextView;
 
 import androidx.annotation.ColorInt;
@@ -54,9 +56,6 @@ import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentActivity;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.slider.Slider;
-
-import java.util.Arrays;
-import java.util.Locale;
 
 /**
  * <p>A dialog to pick a color.</p>

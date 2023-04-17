@@ -16,6 +16,8 @@
 
 package com.jaredrummler.android.colorpicker;
 
+import java.util.Locale;
+
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
@@ -38,11 +40,8 @@ import android.widget.Toast;
 
 import androidx.annotation.ColorInt;
 import androidx.appcompat.content.res.AppCompatResources;
-import androidx.core.content.res.ResourcesCompat;
 import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
-
-import java.util.Locale;
 
 /**
  * This class draws a panel which which will be filled with a color which can be set. It can be used to show the

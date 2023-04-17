@@ -1,7 +1,6 @@
 package com.jaredrummler.android.colorpicker.demo;
 
 import android.annotation.SuppressLint;
-import android.os.Build;
 import android.view.View;
 import android.view.ViewGroup;
 
