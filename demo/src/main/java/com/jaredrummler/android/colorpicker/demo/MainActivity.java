@@ -53,34 +53,32 @@ public class MainActivity extends AppCompatActivity implements ColorPickerDialog
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_color_picker_dialog:
-                ColorPickerDialog.newBuilder()
-                        .setDialogType(ColorPickerDialog.TYPE_CUSTOM)
-                        .setAllowPresets(false)
-                        .setDialogId(DIALOG_ID)
-                        .setColor(Color.BLACK)
-                        .setShowAlphaSlider(true)
-                        .show(this);
-                return true;
-            case R.id.menu_github:
-                try {
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/jaredrummler/ColorPicker")));
-                } catch (ActivityNotFoundException ignored) {
-                }
-                return true;
+        if (item.getItemId() == R.id.menu_color_picker_dialog) {
+            ColorPickerDialog.newBuilder()
+                    .setDialogType(ColorPickerDialog.TYPE_CUSTOM)
+                    .setAllowPresets(false)
+                    .setDialogId(DIALOG_ID)
+                    .setColor(Color.BLACK)
+                    .setShowAlphaSlider(true)
+                    .show(this);
+            return true;
+        } else if (item.getItemId() == R.id.menu_github) {
+            try {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/jaredrummler/ColorPicker")));
+            } catch (ActivityNotFoundException ignored) {
+            }
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override
     public void onColorSelected(int dialogId, int color) {
         Log.d(TAG, "onColorSelected() called with: dialogId = [" + dialogId + "], color = [" + color + "]");
-        switch (dialogId) {
-            case DIALOG_ID:
-                // We got result from the dialog that is shown when clicking on the icon in the action bar.
-                Toast.makeText(MainActivity.this, "Selected Color: #" + Integer.toHexString(color), Toast.LENGTH_SHORT).show();
-                break;
+        if (dialogId == DIALOG_ID) {
+            // We got result from the dialog that is shown when clicking on the icon in the action bar.
+            Toast.makeText(MainActivity.this, "Selected Color: #" + Integer.toHexString(color), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -88,6 +86,5 @@ public class MainActivity extends AppCompatActivity implements ColorPickerDialog
     public void onDialogDismissed(int dialogId) {
         Log.d(TAG, "onDialogDismissed() called with: dialogId = [" + dialogId + "]");
     }
-
 }
  

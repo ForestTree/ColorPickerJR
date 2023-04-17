@@ -46,19 +46,15 @@ public abstract class BasePreferenceFragment extends PreferenceFragmentCompat {
     }
 
     private void setZeroPaddingToLayoutChildren(View view) {
-      if (!(view instanceof ViewGroup)) {
-        return;
-      }
+        if (!(view instanceof ViewGroup)) {
+            return;
+        }
         ViewGroup viewGroup = (ViewGroup) view;
         int childCount = viewGroup.getChildCount();
         for (int i = 0; i < childCount; i++) {
             setZeroPaddingToLayoutChildren(viewGroup.getChildAt(i));
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-                viewGroup.setPaddingRelative(0, viewGroup.getPaddingTop(), viewGroup.getPaddingEnd(),
-                        viewGroup.getPaddingBottom());
-            } else {
-                viewGroup.setPadding(0, viewGroup.getPaddingTop(), viewGroup.getPaddingRight(), viewGroup.getPaddingBottom());
-            }
+            viewGroup.setPaddingRelative(0, viewGroup.getPaddingTop(), viewGroup.getPaddingEnd(),
+                    viewGroup.getPaddingBottom());
         }
     }
 }
