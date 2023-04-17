@@ -79,25 +79,40 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerView
      * Material design colors used as the default color presets
      */
     public static final int[] MATERIAL_COLORS = {
-            0xFFF44336, // RED 500
-            0xFFE91E63, // PINK 500
-            0xFFFF2C93, // LIGHT PINK 500
-            0xFF9C27B0, // PURPLE 500
-            0xFF673AB7, // DEEP PURPLE 500
-            0xFF3F51B5, // INDIGO 500
-            0xFF2196F3, // BLUE 500
-            0xFF03A9F4, // LIGHT BLUE 500
-            0xFF00BCD4, // CYAN 500
-            0xFF009688, // TEAL 500
-            0xFF4CAF50, // GREEN 500
-            0xFF8BC34A, // LIGHT GREEN 500
-            0xFFCDDC39, // LIME 500
-            0xFFFFEB3B, // YELLOW 500
-            0xFFFFC107, // AMBER 500
-            0xFFFF9800, // ORANGE 500
-            0xFF795548, // BROWN 500
-            0xFF607D8B, // BLUE GREY 500
-            0xFF9E9E9E, // GREY 500
+            0xFFFFFFFF,
+            0xffcccccc,
+            0xff888888,
+            0xff444444,
+            0xffef2929,
+            0xffcc0000,
+            0xffa00000,
+            0xfffcaf3e,
+            0xfff57900,
+            0xffce5c00,
+            0xfffce94f,
+            0xffedd400,
+            0xffc4a000,
+            0xff8ae234,
+            0xff73d216,
+            0xff4e9a06,
+            0xff729fcf,
+            0xff3465a4,
+            0xff204a87,
+            0xffad7fa8,
+            0xff75507b,
+            0xff5c3566,
+            0xffcf5d91,
+            0xff9c2f5f,
+            0xff772449,
+            0xffe9b96e,
+            0xffc17d11,
+            0xff8f5902,
+            0xFFFFFF00,
+            0xFF00FF00,
+            0xFFFF0000,
+            0xFF0000FF,
+            0xFFFF00FF,
+            0xFF00FFFF,
     };
 
     static final int ALPHA_THRESHOLD = 165;
@@ -492,7 +507,7 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerView
             // The user clicked a color and a configuration change occurred. Make sure the initial color is in the presets
             presets = unshiftIfNotExists(presets, initialColor);
         }
-        if (isMaterialColors && presets.length == 19) {
+        if (isMaterialColors && presets.length == 34) {
             // Add black to have a total of 20 colors if the current color is in the material color palette
             presets = pushIfNotExists(presets, Color.argb(alpha, 0, 0, 0));
         }
