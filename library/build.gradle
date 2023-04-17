@@ -1,20 +1,25 @@
 apply plugin: 'com.android.library'
 
 android {
-  compileSdkVersion buildConfig.compileSdk
-  resourcePrefix "cpv_"
-  defaultConfig {
-    minSdkVersion buildConfig.minSdk
-    targetSdkVersion buildConfig.targetSdk
-  }
-  lintOptions {
-    abortOnError false
-  }
+    namespace 'com.jaredrummler.android.colorpicker'
+
+    compileSdkVersion buildConfig.compileSdk
+    resourcePrefix "cpv_"
+
+    defaultConfig {
+        minSdkVersion buildConfig.minSdk
+        targetSdkVersion buildConfig.targetSdk
+    }
+
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
-  implementation deps.androidx.appCompat
-  implementation deps.androidx.preferences
+    implementation deps.androidx.appCompat
+    implementation deps.androidx.preference
+    implementation deps.material
 }
 
-apply from: rootProject.file('gradle/maven-push.gradle')
+//apply from: rootProject.file('gradle/maven-push.gradle')

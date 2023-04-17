@@ -30,7 +30,7 @@
       android:layout_width="match_parent"
       android:layout_height="0dp"
       android:layout_weight="1"
-      android:padding="25dp"
+      android:padding="22dp"
       >
 
     <com.jaredrummler.android.colorpicker.ColorPickerView
@@ -38,6 +38,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         app:cpv_alphaChannelVisible="true"
+        app:cpv_borderColor="#646464"
         />
 
     <LinearLayout
@@ -55,7 +56,7 @@
           android:layout_width="0px"
           android:layout_height="fill_parent"
           android:layout_weight="0.5"
-          app:cpv_borderColor="#0099cc"
+          app:cpv_borderColor="#646464"
           app:cpv_colorShape="square"
           />
 
@@ -66,6 +67,7 @@
           android:layout_marginRight="10dp"
           android:gravity="center"
           android:text="→"
+          android:textColor="#646464"
           android:textSize="20sp"
           />
 
@@ -74,6 +76,7 @@
           android:layout_width="0px"
           android:layout_height="fill_parent"
           android:layout_weight="0.5"
+          app:cpv_borderColor="#646464"
           app:cpv_colorShape="square"
           />
     </LinearLayout>
