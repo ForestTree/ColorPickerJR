@@ -81,6 +81,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="20"
+                android:gravity="center"
                 android:textStyle="bold"
                 android:typeface="monospace"
                 tools:text="100%" />
