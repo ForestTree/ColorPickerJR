@@ -22,4 +22,4 @@ dependencies {
     implementation deps.material
 }
 
-//apply from: rootProject.file('gradle/maven-push.gradle')
+apply from: 'publish.gradle'
